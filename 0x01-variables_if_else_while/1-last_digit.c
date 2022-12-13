@@ -7,6 +7,7 @@
  * Return: always 0 (success)
  *
  */
+
 int main(void)
 {
 	int n;
@@ -28,5 +29,6 @@ int main(void)
 	{
 		printf("%d and is 0\n", num);
 	}
+        
 	return(0);
 }	

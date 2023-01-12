@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * main - Write a program that multiplies two numbers.
- * @argc: size of argv.
- * @argv: a pointer to an array containing the program line arguments.
- * Return: 0.
+ * main - Prints the multiplication of two numbers, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ *
+ * Return: If the program receives two arguments - 0.
+ *         If the program does not receive two arguments - 1.
  */
 int main(int argc, char *argv[])
 {
-int m = 0;
+	int num1, num2, prod;
 
-	if (argc == 3)
+	if (argc != 3)
 	{
-		m = atoi(argv[1]) * atoi(argv[2]);
+		printf("Error\n");
+		return (1);
+	}
 
-			printf("%d\n", m);
-			return (0);
-	}
-	else
-	{
-	printf("Error\n");
-	}
-	return (1);
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	prod = num1 * num2;
+
+	printf("%d\n", prod);
+
+	return (0);
 }
